@@ -1,11 +1,12 @@
 .container {
   min-height: 99vh;
+  width: 100%;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
 }
 
 .main {
@@ -15,6 +16,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.postScript {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: small;
 }
 
 .footer {
@@ -57,7 +65,8 @@
 
 .description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .code {
@@ -83,6 +92,7 @@
   padding: 1.5rem;
   text-align: left;
   color: inherit;
+  background-color: lightgrey;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
@@ -90,11 +100,25 @@
   width: 45%;
 }
 
+.cardDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.cardDivContent {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.cardDivKey {
+  font-size: large;
+}
+
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  border-color: slategray;
 }
 
 .card h2 {
@@ -113,9 +137,56 @@
   margin-left: 0.5rem;
 }
 
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard {
+  border: 10px;
+  border-radius: 10px;
+  border-color: aqua;
+  padding: 4px;
+  margin: 10px;
+  background-color: bisque;
+  padding: 8px;
+}
+
+.openingHours {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.icons {
+  font-size: small;
+  color: black;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90%;
   }
 }
